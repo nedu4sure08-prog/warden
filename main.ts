@@ -2,6 +2,7 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
     sprites.destroy(warden)
     sprites.destroy(statusbar)
 })
+let projectile: Sprite = null
 let statusbar: StatusBarSprite = null
 let warden: Sprite = null
 warden = sprites.create(img`
@@ -110,3 +111,23 @@ music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
 statusbar = statusbars.create(50, 2, StatusBarKind.EnemyHealth)
 statusbar.setPosition(67, 36)
 statusbar.value += 5
+if (Math.percentChance(75)) {
+    projectile = sprites.createProjectileFromSprite(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . 9 . 9 . 
+        . . . . . . . . 9 . a a 9 . 9 9 
+        . . . . . 9 9 . 9 9 . . 9 . . 9 
+        . . . 9 8 . 9 . . 9 9 9 9 9 . 9 
+        9 9 . 9 8 8 9 9 9 9 . . . 9 9 . 
+        9 9 . 9 . 8 8 . . . . . . . 9 9 
+        9 9 . 9 . a . . 9 9 . . . . . . 
+        9 9 . . 9 a a a . 9 9 9 . . . . 
+        9 9 9 . 9 . . . . . . 9 9 9 . . 
+        9 . . . 9 9 . . . . . . . . . . 
+        9 . . . . 9 9 . . . . . . . . . 
+        9 9 9 . . . 9 9 . . . . . . . . 
+        . . 9 9 . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, warden, 100, 100)
+}
