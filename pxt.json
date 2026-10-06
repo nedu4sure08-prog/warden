@@ -1,0 +1,42 @@
+{
+    "name": "warden",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "4.1.25",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#f8f8f8",
+        "#f80000",
+        "#FF93C4",
+        "#f8a830",
+        "#f8f858",
+        "#089050",
+        "#70d038",
+        "#133F7C",
+        "#10c0c8",
+        "#42176D",
+        "#c0c0c0",
+        "#787878",
+        "#f8d898",
+        "#c04800",
+        "#000000"
+    ]
+}
