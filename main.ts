@@ -1,4 +1,10 @@
-let warden = sprites.create(img`
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    sprites.destroy(warden)
+    sprites.destroy(statusbar)
+})
+let statusbar: StatusBarSprite = null
+let warden: Sprite = null
+warden = sprites.create(img`
     ....................................................................................................
     ....................................................................................................
     ....................................................................................................
@@ -101,3 +107,6 @@ let warden = sprites.create(img`
     ..............888888888888888888888888aaa...........................................................
     `, SpriteKind.Enemy)
 music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
+statusbar = statusbars.create(50, 2, StatusBarKind.EnemyHealth)
+statusbar.setPosition(67, 36)
+statusbar.value += 5
